@@ -18,7 +18,7 @@ public:
         vector<vector<int>> result;
         for(auto& x : queries) {
             vector<int> temp = {-1, -1};
-            //upper_bound 返回第一个大于x的iterator，record.end()是指向数组最后一个元素的下一个位置的iterator
+            //_bound 返回第一个大于x的iterator，record.end()是指向数组最后一个元素的下一个位置的iterator
             auto mi = upper_bound(record.begin(), record.end(), x);
             if(mi != record.begin()) temp[0] = *--mi;
             //lower_bound 返回第一个大于等于x的iterator，record.end()是指向数组最后一个元素的下一个位置的iterator
